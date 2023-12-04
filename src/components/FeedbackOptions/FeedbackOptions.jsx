@@ -10,7 +10,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
               onLeaveFeedback(label);
             }}
           >
-            {label}
+            {label.charAt(0).toUpperCase() + label.slice(1)}
           </Button>
         );
       })}
