@@ -11,12 +11,10 @@ export class App extends Component {
     bad: 0,
   };
 
-  incrementFeedback = feedback => {
-    this.setState(prevState => {
-      return {
-        [feedback]: prevState[feedback] + 1,
-      };
-    });
+  incrementFeedback = option => {
+    this.setState(prevState => ({
+      [option]: prevState[option] + 1,
+    }));
   };
   countTotalFeedback() {
     return this.state.good + this.state.neutral + this.state.bad;
@@ -33,7 +31,7 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={{ good: 'good', neutral: 'neutral', bad: 'bad' }}
+            options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.incrementFeedback}
           />
         </Section>
