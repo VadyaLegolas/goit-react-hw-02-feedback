@@ -36,6 +36,8 @@ export class App extends Component {
             options={{ good: 'good', neutral: 'neutral', bad: 'bad' }}
             onLeaveFeedback={this.incrementFeedback}
           />
+        </Section>
+        <Section title="Statistics">
           {this.countTotalFeedback() !== 0 && (
             <Statistics
               good={this.state.good}

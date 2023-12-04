@@ -9,7 +9,6 @@ export const Statistics = ({
 }) => {
   return (
     <>
-      <Title>Statistics :</Title>
       <P>Good: {good}</P>
       <P>Neutral: {neutral}</P>
       <P>Bad: {bad}</P>
