@@ -1,4 +1,4 @@
-import { P, Title } from "./Statistics.styled";
+import { P } from "./Statistics.styled";
 
 export const Statistics = ({
   good,
