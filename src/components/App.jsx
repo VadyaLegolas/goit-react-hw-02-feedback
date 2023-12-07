@@ -27,6 +27,10 @@ export class App extends Component {
   }
 
   render() {
+    const { good, neutral, bad } = this.state;
+    const totalFeedback = this.countTotalFeedback();
+    const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
+
     return (
       <>
         <Section title="Please leave feedback">
@@ -38,11 +42,11 @@ export class App extends Component {
         <Section title="Statistics">
           {this.countTotalFeedback() !== 0 && (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
-              total={this.countTotalFeedback()}
-              positivePercentage={this.countPositiveFeedbackPercentage()}
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
+              positivePercentage={positiveFeedbackPercentage}
             />
           )}
           {this.countTotalFeedback() === 0 && (
