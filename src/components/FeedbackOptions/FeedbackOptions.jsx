@@ -6,6 +6,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       {options.map(label => {
         return (
           <Button
+            key={label}
             onClick={() => {
               onLeaveFeedback(label);
             }}
@@ -14,7 +15,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           </Button>
         );
       })}
-      
     </>
   );
 };
